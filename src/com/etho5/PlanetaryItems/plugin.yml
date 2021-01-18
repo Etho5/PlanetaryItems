@@ -1,0 +1,22 @@
+name: PlanetaryItems
+author: Etho5
+main: com.etho5.PlanetaryItems.Main
+version: 0.0.1
+api-version: 1.16
+commands:
+  pitems:
+    description: Base command for PlanetaryItems
+    usage: /<command> [list|give] [player] [item] [amount]
+permissions:
+  planetaryitems.*:
+    description: Allows for use of all PlanetaryItems commands.
+    default: op
+    children:
+      planetaryitems.list: true
+      planetaryitems.give: true
+  planetaryitems.list:
+    description: Allows for generation of a list of planet-specific items.
+    default: true
+  planetaryitems.give:
+    description: Allows user to give an item to a specified player.
+    default: op
